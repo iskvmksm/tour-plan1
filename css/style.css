@@ -604,6 +604,7 @@ template {
   margin-left: 9px;
 }
 .booking__call-center {
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -641,7 +642,7 @@ template {
   cursor: pointer;
 }
 
-.map {
+#map {
   min-width: 347px;
   height: 213px;
   border-radius: 8px;
@@ -702,7 +703,7 @@ template {
   .slider {
     width: 100%;
   }
-  .map {
+  #map {
     width: 340px;
   }
 }
@@ -763,7 +764,7 @@ template {
   .booking {
     width: 100%;
   }
-  .map {
+  #map {
     width: 100%;
   }
 }
