@@ -1029,7 +1029,6 @@ template {
 }
 .footer__social-network {
   display: flex;
-  align-content: start;
   grid-row: 2/4;
   grid-column: span 2;
 }
@@ -1105,6 +1104,8 @@ template {
   border: none;
   flex-basis: 100%;
   margin-bottom: 23px;
+  min-height: 123px;
+  resize: none;
 }
 .footer__button {
   min-width: 160px;
@@ -1124,7 +1125,7 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #8d8d8d;
+  color: #e0e0e0;
 }
 
 @media (max-width: 1200px) {
@@ -1149,6 +1150,9 @@ template {
   }
   .packages-item-large {
     grid-column: span 2;
+  }
+  .footer__input {
+    flex-basis: 100%;
   }
 }
 @media (max-width: 992px) {
@@ -1212,6 +1216,40 @@ template {
   }
   .packages-wrapper {
     grid-template-rows: 460px repeat(2, min-content);
+  }
+  .footer-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 40px;
+  }
+  .footer__input {
+    flex-basis: 49%;
+  }
+  .footer__logo {
+    grid-row: 1/2;
+    grid-column: span 2;
+  }
+  .footer__social-network {
+    grid-row: 1/2;
+    grid-column: span 4;
+    align-self: center;
+  }
+  .footer__categories {
+    grid-row: 2/3;
+    grid-column: span 2;
+  }
+  .footer__legal {
+    grid-column: span 2;
+  }
+  .footer__additional {
+    grid-column: span 2;
+  }
+  .footer__contact-details {
+    grid-column: span 5;
+    grid-row: 3;
+  }
+  .footer__contact-form {
+    grid-column: span 5;
+    grid-row: 4;
   }
 }
 @media (max-width: 768px) {
@@ -1320,6 +1358,9 @@ template {
   .packages-info {
     padding-bottom: 20px;
   }
+  .footer__input {
+    flex-basis: 100%;
+  }
 }
 @media (max-width: 576px) {
   .logo {
@@ -1363,5 +1404,46 @@ template {
   .packages-item-large {
     grid-template-columns: 1fr;
     grid-column: auto/auto;
+  }
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
+  .footer__logo {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .footer__social-network {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .footer__additional {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .footer__categories {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  .footer__legal {
+    grid-row: 5;
+    grid-column: 1;
+  }
+  .footer__contact-details {
+    grid-row: 6;
+    grid-column: 1;
+  }
+  .footer__contact-form {
+    grid-row: 7;
+    grid-column: 1;
+  }
+}
+@media (max-width: 320px) {
+  .footer__button {
+    order: 1;
+  }
+  .footer__info {
+    flex-basis: 100%;
+    margin-bottom: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
