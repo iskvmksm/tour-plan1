@@ -355,6 +355,9 @@ template {
   color: #fff;
   padding: 31px 0;
 }
+.navbar-menu__item--mobile--visible {
+  display: none;
+}
 .navbar-menu__link {
   color: inherit;
   text-decoration: none;
@@ -1295,7 +1298,7 @@ template {
   .navbar-menu__item {
     margin-bottom: 20px;
   }
-  .navbar-menu__item--mobile--hidden {
+  .navbar-menu__item--mobile--visible {
     display: block;
   }
   .menu-button {
