@@ -55,13 +55,35 @@ window.addEventListener('DOMContentLoaded', function () {
 
   });
 
-  let menuButton = document.querySelector('.menu-button');
-  menuButton.addEventListener("click", function () {
-    document
-      .querySelector(".navbar-bottom")
-      .classList.toggle("navbar-bottom--visible");
+  let menuButton = $(".menu-button");
+  menuButton.on("click", function () {
+    $(".navbar-bottom").toggleClass("navbar-bottom--visible");
   });
 
+  let modalButton = $('[data-toggle="modal"]');
+  let closeModalButton = $('.modal__close');
+  modalButton.on('click', openModal);
+  closeModalButton.on('click', closeModal);
+
+  $(document).on('keyup', function (event) {
+    // Проверяем современное свойство key и старое keyCode (для совместимости)
+    if (event.key === 'Escape' || event.keyCode === 27) {
+      closeModal();
+    }
+  });
+
+  function openModal() {
+    let targetModal = $(this).attr("data-href");
+    $(targetModal).find('.modal__overlay').addClass('modal__overlay--visible');
+    $(targetModal).find('.modal__dialog').addClass('modal__dialog--visible');
+  }
+  function closeModal(event) {
+    if (event && event.type === 'click') {
+      event.preventDefault();
+    }
+    $('.modal__overlay--visible').removeClass('modal__overlay--visible');
+    $('.modal__dialog--visible').removeClass('modal__dialog--visible');
+  }
 });
 
 
