@@ -50,7 +50,6 @@ img {
 
 .form {
   display: flex;
-  align-items: start;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
@@ -689,8 +688,8 @@ template {
   cursor: pointer;
 }
 
-#map {
-  height: 213px;
+.map {
+  min-height: 213px;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1288,7 +1287,7 @@ template {
   .booking-slider {
     width: 100%;
   }
-  #map {
+  .map {
     width: 340px;
   }
   .reviews-slider__item {
@@ -1442,7 +1441,7 @@ template {
   .booking {
     width: 100%;
   }
-  #map {
+  .map {
     width: 100%;
   }
   .newsletter-wrapper {

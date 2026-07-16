@@ -101,9 +101,13 @@ window.addEventListener('DOMContentLoaded', function () {
           required: "Телефон обязателен",
         },
       },
-
     });
-  })
+  });
+
+  $('[name="phone"]').mask('+7 (000) 000-0000');
+
+  AOS.init();
+
 });
 
 
